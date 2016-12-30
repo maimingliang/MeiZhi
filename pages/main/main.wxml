@@ -1,0 +1,15 @@
+<!--main.wxml-->
+<view>
+
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+
+    <view class="card" wx:for="{{items}}">
+        <view bindtap="onItemClick">
+            <image class="image" mode="aspectFill" src="{{item.src}}"/>
+        </view>
+    </view>
+ </scroll-view>
+</view>

@@ -14,7 +14,7 @@ Page({
         console.log(event)
 
          wx.showToast({
-             title:  "小红",
+             title:  "小明",
              icon: 'success',
              duration: 2000
          })
@@ -40,6 +40,9 @@ Page({
  
      var that = this;
      ++mCurrentPage;
+     that.setData({
+         hidden: false
+     });
      findMeiZhi(that, mCurrentPage);
      wx.stopPullDownRefresh()
   }
@@ -70,6 +73,15 @@ function findMeiZhi(that, targetPage) {
                 res.data.results == null ||
                 res.data.results.length <= 0) {
 
+            that.setData({
+                hidden: true
+            });
+
+              wx.showToast({
+                 title:  Constant.DATA_IS_NULL,
+                 icon: 'success',
+                 duration: 2000
+            })
                 console.error(Constant.DATA_IS_NULL);
                 return;
             }

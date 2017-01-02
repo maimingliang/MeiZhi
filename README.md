@@ -4,7 +4,7 @@
 
 #效果图
 
-![效果图](https://github.com/maimingliang/MeiZhi/edit/master/meizhi.git)
+![效果图](https://github.com/maimingliang/MeiZhi/blob/master/meizhi.gif)
 
 
 #Thanks
